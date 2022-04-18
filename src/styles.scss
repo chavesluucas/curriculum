@@ -1,0 +1,31 @@
+//fonte
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+//Tirando a margin do corpo, para não ficar as bordas brancas
+*{
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+}
+
+//vai aplicar isso para tudo q tiver no body
+body * {
+  display:block;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+main{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+//Responsividade do Menu. Como utilizamos o transform para mover o menu para a direita, precisos esconder ele, para não ativar a barra de rolagem ao lado
+@media(max-width: 999px){
+
+  body{
+      overflow-x: hidden;
+  }
+}

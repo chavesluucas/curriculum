@@ -1,0 +1,106 @@
+.main-about-me{
+    //Width é a largura, então estamos informando 100vw para ela preencher 100% a tela
+    width: 100vw;
+
+    //Height é a altura, colocamos 60vh para ocupar só uma parte
+    height: 60vh;
+
+    //background só para deixar de boa
+    background-color: white;
+
+    //usamos o display para organizar, e o flex para deixar lado a lado
+    display: flex;
+
+    //Utilizado para centralizar tudo no eixo x ->, utilizamos center para centralizar no centro
+    justify-content: center;
+
+    //Utilizado para os itens ficar centralizado também
+    align-items: center;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+//parte direita da pagina
+.right-about-me{ 
+    //Informado uma largura de 40, pois queremos que ocupe metade da tela
+    width: 40%;
+    //Utilizamos 100 para ocupar toda a tela para cima ou para baixo, ocupando então 50% da pagina
+    //os outros 50% vai ser para a left-page
+    height: 100%;
+    //Utilizamos o display, justify-content e align-items igual o main-login, pelos mesmos motivos
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //Acrescentamos o flex-direction: Column, pois queremos colocar a imagem embaixo do titulo,
+    //mesmo utilizando o display flex, caso não tivesse o Column a imagem ficaria ao lado do titulo
+    flex-direction: column;
+}
+
+.right-about-me > h1{
+    margin-bottom: 10px;
+    color:#3E82E8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.text-about-me > p {
+    color: rgb(92, 91, 91);
+    text-align: justify;
+}
+
+.text-about-me{
+    width: 70%;
+}
+
+.left-about-me{
+    //Informado a mesma estrutura da right-page, pois se trata da outra metade igual
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.image-about-me{
+    width: 24vw;
+}
+
+//Tentando fazer uma responsividade 
+
+//Estamoss informando ao CSS, que enquanto tiver uma tela de 950px, adicione as informações
+@media only screen and (max-width: 950px){
+    
+    //ou seja, qnd a tela for menor que 950px, o card do login deve ter 85%, caso a tela ter mais de 950px, o card fica no tamanho informado
+    .card-login{
+        width: 85%;
+    }
+}
+
+
+//responsividade para celular 
+@media only screen and (max-width: 600px){
+
+    //o main-login vira column para ficar um embaixo do outro
+    .main-login{
+        flex-direction: column;
+    }
+
+    //a parte da imagem é desligada, para ficar apenas o card de login
+    .right-page{
+        display:none;
+    }
+
+    //apenas a parte do card-login apareça e ocupe a tela
+    .left-page{
+        width: 100%;
+        height: auto;
+    }
+
+    //Para o card do login não ficar encostado na borda
+    .card-login{
+        width: 90%;
+    }
+}
+

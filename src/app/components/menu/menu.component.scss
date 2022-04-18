@@ -1,0 +1,98 @@
+a{
+    //todo 'a' será branco
+    color: white;
+
+    //Sem decoração na fonte, tipo o sublinhado embaixo
+    text-decoration: none;
+
+    //transição rapidinha para ficar algo bonito
+    transition: 0.3s;
+
+    box-sizing: border-box;
+    display: block;
+
+}
+
+//Quando passar o mouse por cima dos 'a'
+a:hover {
+    //opacidade para ficar bonitinho
+    opacity: 0.6;
+
+    //para ficar com o mouse diferente quando passar por cima
+    cursor: pointer;
+}
+
+//Estilização da logo
+.logo{
+    //fonte maiorzinha para destacar a logo
+    font-size: 24px;
+
+    //deixa todas as letras em caixa alta
+    text-transform: uppercase;
+    
+    //espaçamento entre as letras
+    letter-spacing: 4px;
+}
+
+//Configurando a nav
+nav{
+    //Display flex para deixar o logo e a lista um do lado do outro
+    display: flex;
+
+    //Faz com que o espaço ao redor seja a metade do espaço entre eles
+    justify-content: space-around;
+
+    //Alinhando ambos verticalmente ao centro
+    align-items: center;
+
+    //Fundo do menu (cor ainda será definida)
+    background-color: #3E82E8;
+
+    //tamanho do menu
+    height: 6vh;
+}
+
+//Estilizando nossa lista (opção do menu)
+.nav-list{
+    //tirando as estilização da lista
+    list-style: none;
+
+    //Para as opções ficar uma ao lado da outra
+    display: flex;
+}
+
+//Estilizando apenas as opções
+.nav-list li{
+    //Espaçamento entre as letras
+    letter-spacing: 2px;
+
+    //espaçamento para esquerda entre as opções
+    margin-left: 32px;
+
+}
+
+
+.menu-mobile{
+       //para ficar com o mouse diferente quando passar por cima
+       cursor: pointer;
+
+        //Para esconter o menu
+        display: none;
+}
+
+//Estilização do menu hamburguer, isso será aplicado para cada linha
+.menu-mobile div{
+
+    //Largura das linhas
+    width: 32px;
+
+    //Altura das linhas
+    height: 2px;
+
+    //cor das linhas
+    background: #fff;
+
+    //Margin para separar cada um
+    margin: 8px;
+
+}

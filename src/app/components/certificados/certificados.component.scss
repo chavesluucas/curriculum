@@ -1,0 +1,53 @@
+.main-certificados{
+    width: 100vw;
+    height: 60vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.left-certificados{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-certificados > h1 {
+    margin-bottom: 10px;
+    color:#3E82E8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.text-ceritificados > p{
+    color: rgb(92, 91, 91);
+    text-align: justify;
+}
+
+.list-certificados{
+    color: rgb(92, 91, 91);
+    text-decoration: overline;
+    text-transform: uppercase;
+
+}
+
+.list-certificados p{
+    margin-bottom: 10px;
+}
+
+.right-certificados{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.img-proway{
+    width: 34vw;
+}

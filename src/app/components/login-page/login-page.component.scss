@@ -1,0 +1,268 @@
+
+//o Main é praticamente todo o corpo do login
+.main-login{
+    //Width é a largura, então estamos informando 100vw para ela preencher 100% a tela 
+    width: 100vw;
+
+    //Height é a altura, seguimos a mesma logica de cima, mas trocando vw por vh
+    height: 100vh;
+
+    //o linear-gradient é oque faz o degrade e só encontramos no background-image. Começamos informando para qual direção
+    //será feito o degrade, no caso informamos para a direita, e informamos as 3 cores do degrade
+    background-image: linear-gradient(to right, #C4CFF5, #97BDF5,#3E82E8);
+
+    //usamos o display para organizar, e o flex para deixar lado a lado
+    display: flex;
+
+    //Utilizado para centralizar tudo no eixo x ->, utilizamos center para centralizar no centro
+    justify-content: center;
+
+    //Utilizado para os itens ficar centralizado também
+    align-items: center;
+}
+
+
+//parte direita da pagina
+.right-page{
+    
+    //Informado uma largura de 50, pois queremos que ocupe metade da tela
+    width: 50vw;
+
+    //Utilizamos 100 para ocupar toda a tela para cima ou para baixo, ocupando então 50% da pagina
+    //os outros 50% vai ser para a left-page
+    height: 100vh;
+
+    //Utilizamos o display, justify-content e align-items igual o main-login, pelos mesmos motivos
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //Acrescentamos o flex-direction: Column, pois queremos colocar a imagem embaixo do titulo,
+    //mesmo utilizando o display flex, caso não tivesse o Column a imagem ficaria ao lado do titulo
+    flex-direction: column;
+
+
+
+}
+
+//Titulo da parte direita
+.right-page > h1{
+    font-size: 2vw;
+    color: white;
+}
+
+
+.img-login{
+    width: 32vw;
+}
+
+
+//Parte esquerda da pagina
+.left-page{
+    //Informado a mesma estrutura da right-page, pois se trata da outra metade igual
+    width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+//Bloco na parte esquerda, onde tem os campos para realizar o login
+.card-login{
+    //Colocamos a porcentagem, para pegar 60% em relação a div (que tem o tamanho de 50vh), ou seja, o card login tem 60% do tamanho de 50vh
+    width: 60%;
+
+    //informado o mesmo padrão 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //para ficar um de baixo do outro
+    flex-direction: column;
+
+    // Padding é a margem, o primeiro valor informado trata-se do eixo Y (no caso, ele terá 30px no eixo de cima e de baixo)
+    //o segundo valor trata-se do eixo X (no caso, ele terá 35px nos eixos laterais)
+    //Obs: os paddings são margens para dentro da div
+    padding: 30px 35px;
+ 
+    //backgroun da mesma cor do azul mais forte do degrade, porém, com uma transparência para fazer um charme
+    background-color: #0066ff2f;
+    
+    //Utilizado para arrendodar a borda do card
+    border-radius: 20px; 
+
+    //O box-shadow é a sombra, o primeiro valor trata-se do X (e como a gente quer uma sombra central, ela vai ser 0), o segundo valor
+    //é para a sombrar mover para cima ou para baixo (informamos 10px para ela descer, caso a gente informar -10px a sombra iria subir),
+    //o terceiro valor é o Blur, e informamos um de 40px, e por ultimo a cor e infomamos um preto com transparência
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+
+//Titulo do bloco informado acima
+.card-login > h1{
+    color: white;
+
+    //grossura da font
+    font-weight: 800;
+
+    //Retirando a margim para ficar algo bem legal
+    margin: 0;
+
+    margin-top: 40px;
+
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    
+}
+
+.card-login > h2{
+
+    color:white;
+
+    font-weight: 800;
+
+    //Retirando a margim para ficar algo bem legal
+    margin: 0;
+
+    margin-bottom: 40px;
+
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+
+}
+
+//Textos que estão acima do input
+.textfield{
+
+    //Largura 100% para ficar responsivo
+    width: 100%;
+
+    //utilizamos para organizar as escritas em cima para esquerda do input
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    //margem para baixo
+    margin-bottom: 10px;
+}
+
+
+//Alterar campo Input
+.textfield > input{
+    //largura de 100%
+    width: 100%;
+
+    //Tiramos a borda meio esquisita do input
+    border: none;
+
+    //Arredondamos um pouco o campo do input
+    border-radius: 10px;
+
+    //Pading informado acima, se informamos apenas um valor ele vai entender que é para o eixo X e também o eixo Y
+    padding: 15px;
+
+    //background do input
+    background: #C4CFF5;
+
+    //tamanho da font
+    font-size: 12pt;
+
+    //Outline é a caixinha que fica em volta do campo quando clicamos nele, informamos 'none' para tirar
+    outline: none;
+
+    //Para o input não passar do padding, o border-box está como valor para a div filho não ultrapassar a div pai
+    box-sizing: border-box;
+}
+
+
+.textfield > label{
+    color: white;
+
+    //margem para baixo
+    margin-bottom: 10px;
+}
+
+//formatação do placeholder do input
+.textfield > input::placeholder{
+    color: #3E82E8;
+}
+
+//formatação do botão de LOGAR
+.button-login{
+    
+    //larguar de 100%
+    width: 100%;
+
+    //padding de 16px no eixo X (<- eixos laterais ->) e 0px no eixo y
+    padding: 16px 0px;
+
+    //Margem de 25px nos dois eixos
+    margin: 25px;
+
+    //Sem a bordinha estranha do HTML
+    border: none;
+
+    //Arredondando a borda
+    border-radius: 8px;
+
+    //outline none, para não aparecer a bordiinha quando cliclamos
+    outline: none;
+
+    //para o texto ficar em capslock
+    text-transform: uppercase;
+
+    //grossura da font
+    font-weight: 800;
+
+    //Espaço entre as letras
+    letter-spacing: 2px;
+
+    //cor da fonte
+    color: #3E82E8;
+
+    //cor do botão
+    background-color: white;
+
+    //para quando botar o mouse em cima do botão, o cursor ficar com o dedinho para clicar
+    cursor: pointer;
+
+    //Inserido uma sombrinha para dar aquele charme
+    box-shadow: 0px 10px 40px -12px #659aeb;
+}
+
+
+//Tentando fazer uma responsividade 
+
+//Estamoss informando ao CSS, que enquanto tiver uma tela de 950px, adicione as informações
+@media only screen and (max-width: 950px){
+    
+    //ou seja, qnd a tela for menor que 950px, o card do login deve ter 85%, caso a tela ter mais de 950px, o card fica no tamanho informado
+    .card-login{
+        width: 85%;
+    }
+}
+
+
+//responsividade para celular 
+@media only screen and (max-width: 600px){
+
+    //o main-login vira column para ficar um embaixo do outro
+    .main-login{
+        flex-direction: column;
+    }
+
+    //a parte da imagem é desligada, para ficar apenas o card de login
+    .right-page{
+        display:none;
+    }
+
+    //apenas a parte do card-login apareça e ocupe a tela
+    .left-page{
+        width: 100%;
+        height: auto;
+    }
+
+    //Para o card do login não ficar encostado na borda
+    .card-login{
+        width: 90%;
+    }
+}
