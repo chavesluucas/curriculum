@@ -9,7 +9,8 @@
 
     //o linear-gradient é oque faz o degrade e só encontramos no background-image. Começamos informando para qual direção
     //será feito o degrade, no caso informamos para a direita, e informamos as 3 cores do degrade
-    background-image: linear-gradient(to right, #C4CFF5, #97BDF5,#3E82E8);
+    // background-image: linear-gradient(to right, #03bebe, #029292,#004949);
+     background: #00ecec;
 
     //usamos o display para organizar, e o flex para deixar lado a lado
     display: flex;
@@ -45,26 +46,20 @@
 
 }
 
-//Titulo da parte direita
-.right-page > h1{
-    font-size: 2vw;
-    color: white;
-}
-
 
 .img-login{
-    width: 32vw;
+    width: 40rem;
 }
 
 
 //Parte esquerda da pagina
 .left-page{
     //Informado a mesma estrutura da right-page, pois se trata da outra metade igual
-    width: 50vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -84,10 +79,9 @@
     // Padding é a margem, o primeiro valor informado trata-se do eixo Y (no caso, ele terá 30px no eixo de cima e de baixo)
     //o segundo valor trata-se do eixo X (no caso, ele terá 35px nos eixos laterais)
     //Obs: os paddings são margens para dentro da div
-    padding: 30px 35px;
+    padding: 1.875rem 2.125rem;
  
-    //backgroun da mesma cor do azul mais forte do degrade, porém, com uma transparência para fazer um charme
-    background-color: #0066ff2f;
+    background-color:  #009999;
     
     //Utilizado para arrendodar a borda do card
     border-radius: 20px; 
@@ -101,7 +95,7 @@
 
 //Titulo do bloco informado acima
 .card-login > h1{
-    color: white;
+    color: #FFF;
 
     //grossura da font
     font-weight: 800;
@@ -109,82 +103,26 @@
     //Retirando a margim para ficar algo bem legal
     margin: 0;
 
-    margin-top: 40px;
+    margin-top: 1rem;
 
-    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    // text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
     
 }
 
 .card-login > h2{
 
-    color:white;
+    color:#FFF;
 
     font-weight: 800;
 
-    //Retirando a margim para ficar algo bem legal
-    margin: 0;
+    margin-bottom: 1rem;
 
-    margin-bottom: 40px;
+    margin-top: 0.5rem;
 
-    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    // text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
 
 }
 
-//Textos que estão acima do input
-.textfield{
-
-    //Largura 100% para ficar responsivo
-    width: 100%;
-
-    //utilizamos para organizar as escritas em cima para esquerda do input
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    //margem para baixo
-    margin-bottom: 10px;
-}
-
-
-//Alterar campo Input
-.textfield > input{
-    //largura de 100%
-    width: 100%;
-
-    //Tiramos a borda meio esquisita do input
-    border: none;
-
-    //Arredondamos um pouco o campo do input
-    border-radius: 10px;
-
-    //Pading informado acima, se informamos apenas um valor ele vai entender que é para o eixo X e também o eixo Y
-    padding: 15px;
-
-    //background do input
-    background: #C4CFF5;
-
-    //tamanho da font
-    font-size: 12pt;
-
-    //Outline é a caixinha que fica em volta do campo quando clicamos nele, informamos 'none' para tirar
-    outline: none;
-
-    //Para o input não passar do padding, o border-box está como valor para a div filho não ultrapassar a div pai
-    box-sizing: border-box;
-}
-
-
-.textfield > label{
-    color: white;
-
-    //margem para baixo
-    margin-bottom: 10px;
-}
-
-//formatação do placeholder do input
-.textfield > input::placeholder{
-    color: #3E82E8;
-}
 
 //formatação do botão de LOGAR
 .button-login{
@@ -193,10 +131,10 @@
     width: 100%;
 
     //padding de 16px no eixo X (<- eixos laterais ->) e 0px no eixo y
-    padding: 16px 0px;
+    padding: 1rem 0;
 
     //Margem de 25px nos dois eixos
-    margin: 25px;
+    margin: 1rem;
 
     //Sem a bordinha estranha do HTML
     border: none;
@@ -217,16 +155,16 @@
     letter-spacing: 2px;
 
     //cor da fonte
-    color: #3E82E8;
+    color: #009999;
 
     //cor do botão
-    background-color: white;
+    background-color: #fff;
 
     //para quando botar o mouse em cima do botão, o cursor ficar com o dedinho para clicar
     cursor: pointer;
 
     //Inserido uma sombrinha para dar aquele charme
-    box-shadow: 0px 10px 40px -12px #659aeb;
+    box-shadow: 0px 10px 40px -12px rgb(0, 153, 153);
 }
 
 
